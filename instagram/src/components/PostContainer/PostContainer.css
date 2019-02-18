@@ -1,0 +1,15 @@
+.topHeader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+
+.topHeader img {
+    padding: 10px;
+    border-radius: 100px;
+}
+
+.wholePostContainer {
+    border: 1px solid gray;
+    margin: 20px;
+}
