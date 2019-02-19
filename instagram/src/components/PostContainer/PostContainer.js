@@ -3,6 +3,9 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faComment } from '@fortawesome/free-solid-svg-icons';
 
 
 const PostContainer = props => {
@@ -15,6 +18,13 @@ const PostContainer = props => {
             </div>
 
             <img src={props.allPosts.imageUrl} alt={props.allPosts.username}/>
+
+            <div className='icons'>
+            <FontAwesomeIcon icon={faHeart} className='heartIcon'/>    
+            
+            <FontAwesomeIcon icon={faComment} className='commentIcon' /> 
+             </div>
+            
             <p className='likes'><strong>{props.allPosts.likes} likes</strong></p>
             <CommentSection allComments={props.allPosts.comments}/>
         </div>
@@ -33,14 +43,6 @@ PostContainer.propTypes = {
     ),
 }
 
-// PostContainer.propTypes = {
-//     allPosts: PropTypes.arrayOf(
-//         PropTypes.shape({
-//             username: PropTypes.string
-
-//         })
-//     )
-// }
 
 
 

@@ -7,6 +7,7 @@ import PostContainer from './components/PostContainer/PostContainer';
 import PropTypes from 'prop-types';
 
 
+
 class App extends Component {
   constructor(){
     super();
@@ -20,6 +21,7 @@ class App extends Component {
       <div className="App">
         <div> 
           {/* <img src='/ig_search_bar.png' /> */}
+          
           <form>
           <input placeholder='Search'>
           </input>

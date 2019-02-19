@@ -10,7 +10,7 @@
 }
 
 .wholePostContainer {
-    /* border: 1px solid gray; */
+    border: 1px solid silver;
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -20,4 +20,12 @@
 
 .likes {
     padding: 20px;
+}
+
+.heartIcon {    
+    padding: 10px;
+}
+
+.commentIcon {    
+    padding: 10px;
 }
