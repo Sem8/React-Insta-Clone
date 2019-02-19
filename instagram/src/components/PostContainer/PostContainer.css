@@ -1,0 +1,31 @@
+.topHeader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+
+.topHeader img {
+    padding: 10px;
+    border-radius: 100px;
+}
+
+.wholePostContainer {
+    border: 1px solid silver;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.likes {
+    padding: 20px;
+}
+
+.heartIcon {    
+    padding: 10px;
+}
+
+.commentIcon {    
+    padding: 10px;
+}
