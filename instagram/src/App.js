@@ -18,9 +18,7 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({ instaData: dummyData });
-  }
-
-  
+  }  
  
   render() {
     return (

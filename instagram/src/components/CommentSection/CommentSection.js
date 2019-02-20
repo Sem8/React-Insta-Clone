@@ -46,15 +46,10 @@ class CommentSection extends Component {
     // allComments.push(newComment);
     // this.setState({ allComments, newComment: ' ' });
     }
-
-     
-    
-    
-
     render() {
         return (
             <div className='allCommentDiv'>
-                {this.props.allComments.map((eachComment, index) => (
+                {this.state.allComments.map((eachComment, index) => (
                     <Comment key={index} commentData={eachComment} />
                 ))}
 
