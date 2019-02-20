@@ -6,11 +6,9 @@ const SearchBar = props => {
     return (
         <div>          
           <form>
-          <input 
-          placeholder='Search'
-          onSubmit={props.searchAUser} 
-          />
-          
+            <input 
+            placeholder='Search'
+            onClick={props.searchAUser} />          
           </form>          
         </div>
 
