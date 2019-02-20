@@ -20,8 +20,7 @@ const PostContainer = props => {
             <img src={props.allPosts.imageUrl} alt={props.allPosts.username}/>
 
             <div className='icons'>
-            <FontAwesomeIcon icon={faHeart} className='heartIcon'/>    
-            
+            <FontAwesomeIcon icon={faHeart} className='heartIcon'/>            
             <FontAwesomeIcon icon={faComment} className='commentIcon' /> 
              </div>
             
