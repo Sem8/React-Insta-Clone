@@ -20,8 +20,6 @@ import NewComment from './NewComment';
 //         </div>
 //     )
 // }
-
-
 class CommentSection extends Component {
     constructor(props) {
         super(props);
@@ -41,10 +39,7 @@ class CommentSection extends Component {
             allComments: [...this.state.allComments, { username: 'Sem', text: this.state.newComment}], 
             newComment: ' '
         });
-    //     const newComment = { text: this.state.newComment, username: 'sem' };
-    // const allComments = this.state.allComments.slice();
-    // allComments.push(newComment);
-    // this.setState({ allComments, newComment: ' ' });
+   
     }
     render() {
         return (
@@ -63,8 +58,8 @@ class CommentSection extends Component {
 }
 
 
-// CommentSection.propTypes = {
-//     allcomments: PropTypes.arrayOf(PropTypes.object.isRequired)
-// }
+CommentSection.propTypes = {
+    allcomments: PropTypes.arrayOf(PropTypes.object.isRequired)
+}
 
 export default CommentSection

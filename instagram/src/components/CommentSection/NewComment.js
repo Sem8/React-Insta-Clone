@@ -3,7 +3,7 @@ import React from 'react';
 
 const NewComment = props => {
     return (
-        <div>
+        
             <form onSubmit={props.submitNewComment}>
                 <input 
                 placeholder='Add a comment'
@@ -14,7 +14,7 @@ const NewComment = props => {
                 </input>
         </form>
 
-        </div>
+       
         
     )
 }
