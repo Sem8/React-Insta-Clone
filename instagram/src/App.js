@@ -6,22 +6,43 @@ import './App.css';
 import PropTypes from 'prop-types';
 // import SearchBar from './components/SearchBar/SearchBar';
 import PostsPage from './components/PostContainer/PostsPage';
+import authenticate from './authentication/authenticate';
+import Login from './components/Login/Login';
+
+// const authenticate = App => {
+//   class extends Component {
+//     constructor() {
+//       super();
+//     }
+  
+//     render() {
+//       return (
+//         <div>
+//           <PostsPage />
+//         </div>
+//       )
+//     }
+//    }
+// }
+
+const PageToDisplay = authenticate(PostsPage)(Login);
 
 class App extends Component {
   constructor() {
     super();
+    
   }
 
   render() {
     return (
       <div>
+        <PageToDisplay />
+        <Login />
         <PostsPage />
       </div>
     )
   }
  }
-
-
 
 // class App extends Component {
 //   constructor(){
@@ -71,3 +92,4 @@ App.propTypes = {
 }
 
 export default App;
+// export default PageToDisplay(App)(Login)
