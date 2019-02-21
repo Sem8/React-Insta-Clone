@@ -7,28 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 
+import styled, { css } from 'styled-components';
+import { UsernameP } from '../Styles/Reusables';
 
-// const PostContainer = props => {
-//     // console.log(props);
-//     return (
-//         <div className='wholePostContainer'>
-//             <div className='topHeader'>
-//             <img src={props.allPosts.thumbnailUrl} alt={props.allPosts.username}/> 
-//              <p><strong>{props.allPosts.username}</strong></p>                
-//             </div>
 
-//             <img src={props.allPosts.imageUrl} alt={props.allPosts.username}/>
-
-//             <div className='icons' onClick={props.likeIncrement}>
-//             <FontAwesomeIcon icon={faHeart} className='heartIcon' />            
-//             <FontAwesomeIcon icon={faComment} className='commentIcon' /> 
-//              </div>
-            
-//             <p className='likes'><strong>{props.allPosts.likes} likes</strong></p>
-//             <CommentSection allComments={props.allPosts.comments}/>
-//         </div>
-//     )
-// }
 
 class PostContainer extends Component {
     constructor(props) {
@@ -46,7 +28,7 @@ class PostContainer extends Component {
             <div className='wholePostContainer'>
             <div className='topHeader'>
             <img src={this.props.allPosts.thumbnailUrl} alt={this.props.allPosts.username}/> 
-             <p><strong>{this.props.allPosts.username}</strong></p>                
+             <UsernameP><strong>{this.props.allPosts.username}</strong></UsernameP>                
             </div>
 
             <img src={this.props.allPosts.imageUrl} alt={this.props.allPosts.username}/>

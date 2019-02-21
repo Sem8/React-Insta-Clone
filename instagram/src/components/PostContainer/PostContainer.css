@@ -10,13 +10,13 @@
 }
 
 .wholePostContainer {
-    border: 1px solid silver;
+    border: 1px solid #FFEFD5;
     margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-}
+    }
 
 .likes {
     padding: 20px;
