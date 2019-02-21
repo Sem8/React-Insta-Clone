@@ -9,12 +9,13 @@ class Login extends Component {
     }
 
     handleInputChanges = e => {
-        this.setState({ input: e.target.value })
+        this.setState({ [e.target.name]: e.target.value })
     }
 
     signIn = e => {
         e.preventDefault();
-        localStorage.setItem('user', this.state.inputText)
+        localStorage.setItem('user', this.state.inputText);
+        window.location.reload();
     }
 
     render() {
@@ -22,8 +23,9 @@ class Login extends Component {
             <div className='loginDiv'>
                 <input
                 placeholder='User name'
-                value={this.inputText}
-                onChange={this.handleInputChanges} 
+                value={this.state.inputText}
+                onChange={this.handleInputChanges}
+                name="inputText" 
                 />
                 <input
                 placeholder='Password' />

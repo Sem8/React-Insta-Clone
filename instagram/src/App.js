@@ -29,7 +29,7 @@ const PageToDisplay = authenticate(PostsPage)(Login);
 
 class App extends Component {
   constructor() {
-    super();
+    super();    
     
   }
 
@@ -37,8 +37,8 @@ class App extends Component {
     return (
       <div>
         <PageToDisplay />
-        <Login />
-        <PostsPage />
+        {/* <Login /> */}
+        {/* <PostsPage /> */}
       </div>
     )
   }

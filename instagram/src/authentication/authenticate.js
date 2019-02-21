@@ -1,13 +1,31 @@
-import React from 'react';
-// import React from "react";
+// import React from 'react';
+import React, { Component } from 'react'
 
-const authenticate = firstClassComponent => secondClassComponent => props => {
-    if(localStorage.getItem('user')) {
-        return <firstClassComponent />;
-    }
+const authenticate = FirstClassComponent => SecondClassComponent => 
+    class extends Component {
+        constructor() {
+            super();
+            this.state = {
+                loggedIn: false
+            }
+        }
 
-    return <secondClassComponent />;     
-}
+        componentDidMount() {
+            if(!localStorage.getItem('user')) {
+                this.setState({loggedIn: false});
+            } else {
+                this.setState({ loggedIn: true });
+            }
+        }
+
+        render() {
+            if(this.state.loggedIn == true) {
+                return <FirstClassComponent />;
+            }        
+            return <SecondClassComponent />; 
+        }              
+    }     
+
 
 // class extends React.Component {
 //     render() {
@@ -17,4 +35,4 @@ const authenticate = firstClassComponent => secondClassComponent => props => {
   
 
 export default authenticate
-// export default authenticate(firstClassComponent)(secondClassComponent)
+// export default authenticate(FirstClassComponent)(SecondClassComponent)
