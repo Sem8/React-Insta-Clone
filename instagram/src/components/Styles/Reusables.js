@@ -15,9 +15,8 @@ export const UsernameP = styled.p`
         css`        
         margin-left: 50px;    
         font-size: 24px;
-        `}
-
-`
+        `}        
+`;
 
 export const StyledDiv = styled.div`
   padding: 20px;

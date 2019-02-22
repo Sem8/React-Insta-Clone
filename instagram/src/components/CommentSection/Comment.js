@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styled, { css } from 'styled-components';
+import { UsernameP } from '../Styles/Reusables';
+
 const Comment = props => {
     console.log(props);
     return (
         <div className='eachCommentDiv'>
-            <p>
+            <UsernameP>
                 <strong>{props.commentData.username}</strong> {props.commentData.text}
-            </p>
+            </UsernameP>
         </div>
     )
 }
