@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const UsernameP = styled.p`
     font-size: 22px;
@@ -9,7 +9,17 @@ export const UsernameP = styled.p`
     &:hover {
       color: #FFC0CB;
       cursor: pointer;
-
     }
+    ${props => 
+        props.className === 'likes' && 
+        css`        
+        margin-left: 50px;    
+        font-size: 24px;
+        `}
 
 `
+
+export const StyledDiv = styled.div`
+  padding: 20px;
+  margin: 0 auto;    
+`;

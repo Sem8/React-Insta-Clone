@@ -5,21 +5,6 @@ import './CommentSection.css';
 
 import NewComment from './NewComment';
 
-// const CommentSection = props => {
-//     // console.log(props);
-//     return (
-//         <div className='allCommentDiv'>
-//             {props.allComments.map((eachComment, index) => (
-//                 <Comment key={index} commentData={eachComment} />
-//             ))}
-//             <form>
-//           <input placeholder='Add a comment'>
-//           </input>
-//           </form>
-
-//         </div>
-//     )
-// }
 class CommentSection extends Component {
     constructor(props) {
         super(props);

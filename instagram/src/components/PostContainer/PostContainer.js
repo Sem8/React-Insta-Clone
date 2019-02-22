@@ -10,7 +10,25 @@ import { faComment } from '@fortawesome/free-solid-svg-icons';
 import styled, { css } from 'styled-components';
 import { UsernameP } from '../Styles/Reusables';
 
+export const StyledImg = styled.img`
+  padding: 20px;
+  margin: 0 auto;    
+`;
 
+export const StyledWolePostDiv = styled.div`
+  border: 1px solid #DC143C;
+`
+
+export const StyledIconDiv = styled.div`
+    background: #DC143C;
+    ${props => 
+    props.className === 'icons' && 
+    css`
+    background: #FFC0CB;
+    margin-left: 50px;    
+    border-radius: 20px;
+    `}
+`;
 
 class PostContainer extends Component {
     constructor(props) {
@@ -25,22 +43,22 @@ class PostContainer extends Component {
     }
     render() {
         return (
-            <div className='wholePostContainer'>
+            <StyledWolePostDiv className='wholePostContainer'>
             <div className='topHeader'>
-            <img src={this.props.allPosts.thumbnailUrl} alt={this.props.allPosts.username}/> 
+            <StyledImg src={this.props.allPosts.thumbnailUrl} alt={this.props.allPosts.username}/> 
              <UsernameP><strong>{this.props.allPosts.username}</strong></UsernameP>                
             </div>
 
-            <img src={this.props.allPosts.imageUrl} alt={this.props.allPosts.username}/>
+            <StyledImg src={this.props.allPosts.imageUrl} alt={this.props.allPosts.username}/>
 
-            <div className='icons' onClick={this.likeIncrement}>
+            <StyledIconDiv className='icons' onClick={this.likeIncrement}>
             <FontAwesomeIcon icon={faHeart} className='heartIcon' />            
             <FontAwesomeIcon icon={faComment} className='commentIcon' /> 
-             </div>
+             </StyledIconDiv>
             
-            <p className='likes'><strong>{this.state.likes} likes</strong></p>
+            <UsernameP className='likes'><strong>{this.state.likes} likes</strong></UsernameP>
             <CommentSection allComments={this.props.allPosts.comments}/>
-        </div>
+        </StyledWolePostDiv>
 
         )
     }

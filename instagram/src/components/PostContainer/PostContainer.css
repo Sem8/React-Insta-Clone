@@ -5,7 +5,7 @@
 }
 
 .topHeader img {
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 100px;
 }
 
@@ -23,9 +23,9 @@
 }
 
 .heartIcon {    
-    padding: 10px;
+    padding: 20px;
 }
 
 .commentIcon {    
-    padding: 10px;
+    padding: 20px;
 }
