@@ -35,4 +35,3 @@ const authenticate = FirstClassComponent => SecondClassComponent =>
   
 
 export default authenticate
-// export default authenticate(FirstClassComponent)(SecondClassComponent)

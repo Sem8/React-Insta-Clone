@@ -5,6 +5,7 @@ import PostContainer from './PostContainer';
 import PropTypes from 'prop-types';
 
 import SearchBar from '../SearchBar/SearchBar';
+import styled from 'styled-components'
 
 class PostsPage extends Component {
     constructor(){

@@ -7,28 +7,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 
+import styled, { css } from 'styled-components';
+import { UsernameP } from '../Styles/Reusables';
 
-// const PostContainer = props => {
-//     // console.log(props);
-//     return (
-//         <div className='wholePostContainer'>
-//             <div className='topHeader'>
-//             <img src={props.allPosts.thumbnailUrl} alt={props.allPosts.username}/> 
-//              <p><strong>{props.allPosts.username}</strong></p>                
-//             </div>
+export const StyledImg = styled.img`
+  padding: 20px;
+  margin: 0 auto;    
+`;
 
-//             <img src={props.allPosts.imageUrl} alt={props.allPosts.username}/>
+export const StyledWolePostDiv = styled.div`
+  border: 1px solid #DC143C;
+`
 
-//             <div className='icons' onClick={props.likeIncrement}>
-//             <FontAwesomeIcon icon={faHeart} className='heartIcon' />            
-//             <FontAwesomeIcon icon={faComment} className='commentIcon' /> 
-//              </div>
-            
-//             <p className='likes'><strong>{props.allPosts.likes} likes</strong></p>
-//             <CommentSection allComments={props.allPosts.comments}/>
-//         </div>
-//     )
-// }
+export const StyledIconDiv = styled.div`
+    background: #DC143C;
+    ${props => 
+    props.className === 'icons' && 
+    css`
+    background: #FFC0CB;
+    margin-left: 50px;    
+    border-radius: 20px;
+    `}
+`;
 
 class PostContainer extends Component {
     constructor(props) {
@@ -43,22 +43,22 @@ class PostContainer extends Component {
     }
     render() {
         return (
-            <div className='wholePostContainer'>
+            <StyledWolePostDiv className='wholePostContainer'>
             <div className='topHeader'>
-            <img src={this.props.allPosts.thumbnailUrl} alt={this.props.allPosts.username}/> 
-             <p><strong>{this.props.allPosts.username}</strong></p>                
+            <StyledImg src={this.props.allPosts.thumbnailUrl} alt={this.props.allPosts.username}/> 
+             <UsernameP><strong>{this.props.allPosts.username}</strong></UsernameP>                
             </div>
 
-            <img src={this.props.allPosts.imageUrl} alt={this.props.allPosts.username}/>
+            <StyledImg src={this.props.allPosts.imageUrl} alt={this.props.allPosts.username}/>
 
-            <div className='icons' onClick={this.likeIncrement}>
+            <StyledIconDiv className='icons' onClick={this.likeIncrement}>
             <FontAwesomeIcon icon={faHeart} className='heartIcon' />            
             <FontAwesomeIcon icon={faComment} className='commentIcon' /> 
-             </div>
+             </StyledIconDiv>
             
-            <p className='likes'><strong>{this.state.likes} likes</strong></p>
+            <UsernameP className='likes'><strong>{this.state.likes} likes</strong></UsernameP>
             <CommentSection allComments={this.props.allPosts.comments}/>
-        </div>
+        </StyledWolePostDiv>
 
         )
     }
